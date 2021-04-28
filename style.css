@@ -1,0 +1,60 @@
+body {
+    display: grid;
+
+    grid-template-areas:
+    'header header'
+    'form maintable';
+
+    grid-template-rows: 20% 1fr;
+    grid-template-columns: 20% 1fr;
+    grid-gap: 10px 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+#header {
+    grid-area: header;
+    padding: 1em;
+    background-color:#ffddcc;
+}
+
+#newcontact-form {
+    grid-area: form;
+    padding: 1.5em; 
+    background-color:#ffddcc;  
+}
+
+#maintable {
+    grid-area: maintable;
+    padding: 0.5;  
+    background-color:#ffddcc;
+}
+
+
+.file {
+    visibility: hidden;
+    position: absolute;
+}
+
+@media(max-width: 1200px) {
+    body {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'header'
+        'form'
+        'maintable';
+        grid-gap: 0em;
+        margin: 0;
+    }
+
+    #header, #newcontact-form, #maintable {
+        width: 100%;
+    }
+
+    .mobilehidden {
+        visibility: hidden;
+        position: absolute;
+    }
+}

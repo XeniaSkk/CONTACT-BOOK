@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ec86bbe52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>MyContactsApp</title>
+</head>
+<body>
+    <h1 class="display-4 text-center" id="header">
+      <i class="fas fa-users text-primary"></i> My<span class="text-primary">Contact</span>Book</h1>
+    <form id="newcontact-form">
+      <div class="form-group">
+        <input type="text" id="name" class="form-control" placeholder="Full Name">
+      </div>
+      <div class="form-group">
+        <input type="tel" id="number" class="form-control" pattern="[0-9]{10,13}" placeholder="Phone Number">
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" class="form-control" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <textarea type="text" id="comments" name="comments" class="form-control" rows="2" maxlength="50" placeholder="Comments"></textarea>
+      </div>
+      <input type="submit" value="Add Contact" class="btn btn-primary rounded-pill btn-block">
+    </form>
+    <div id="maintable">
+    <table class="table table-striped mt-5">
+      <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Phone Number</th>
+            <th class="mobilehidden">Email</th>
+            <th class="mobilehidden">Comments</th>
+            <th>  </th>
+          </tr> 
+        </thead>  
+        <tbody id="contact-list"></tbody>
+      </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
